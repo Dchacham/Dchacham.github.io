@@ -3,7 +3,13 @@ h1 {
     text-align: center;
     background-color: blueviolet;
 }
-p {color:aquamarine;
-text-align: center;
-background-color:aquamarine
+p {
+    color: black;
+    text-align: center;
+    background-color:aquamarine
+}
+p1{
+    color:black
+    text-align: center;
+    background-color:pink
 }
