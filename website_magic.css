@@ -8,8 +8,13 @@ p {
     text-align: center;
     background-color:aquamarine;
 }
-p1 {
+p#pink_line  {
     color:black;
     text-align: center;
     background-color:pink;
+}
+
+
+.stages {
+    font-size:90px;
 }
