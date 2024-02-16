@@ -6,7 +6,8 @@ h1 {
 p {
     color: black;
     margin-left: auto;
-    background-color:aquamarine;
+    background-color:transparent;
+
 }
 p#pink_line  {
     color:black;
