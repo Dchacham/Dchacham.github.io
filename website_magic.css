@@ -13,12 +13,15 @@ p#pink_line  {
     color:black;
     text-align: center;
     background-color:pink;
+    font-size: 24px;
+    
 }
 
 
-.stages {
+.title1 {
     font-size:90px;
 }
 #lname{
-    size:100px
+    size:100px;
 }
+
