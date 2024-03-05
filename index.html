@@ -6,12 +6,21 @@
         <link rel="icon" type="image/x-icon" href="favicon.jpg">
         <script src="magic.js"></script>
         <br>
-        <iframe src="common.html"></iframe>
+        <!-- <iframe src="common.html"></iframe> -->
+        <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
+        <!-- <script src="assets/jquery.js" type="text/javascript"></script> -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
     </head>
     <body>
-        
+        <div id="nav-placeholder"></div>
+        <script>
+            $(function(){
+              $("#nav-placeholder").load("index.html");
+            });
+            </script>
         <h1 class="title1"> Multifactorial disorders</h1>
-        <p>Multi factorial diseases generally occur due to a combination of gentics,lifestyle and even evironmental factors.
+        <p>Multi factorial diseases generally occur due to a combination of gentics, lifestyle and even evironmental factors.
         Environmental factures can include a number of things such as Chemical exposure,diet,certain medications,tobacco or alcohol usage. 
         Mutations can be inheritted or developed. 
         A mutation is any change that occurs in DNA sequencing or pattern when DNA is being replicated in preparation for cellular division.
@@ -27,7 +36,7 @@
        </p>
        <a href="Alzheimers_info.html">Alzheimers information</a>
        <br>
-       <a href="Schizophrenia_info.html">Schizophrenia Infromation</a>
+       <a href="Schizophrenia_info.html">Schizophrenia Information</a>
 
    </body>   
 </html>  
