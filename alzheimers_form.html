@@ -13,7 +13,7 @@
         <h1>Alzheimers</h1>
         <p id="pink_line"> Alzheimers is one of many gentic disorders.</p>
         <p>Alzheimers is broken up into three main stages.The different stages of Alzheimers vary on the severity of ones condition. The three main stages of Alzheimers are Mild,Moderate, and late stage Alzheimers.</p>
-        <form>
+        <form  action="./action_page.php">
             <p> Fill out the questionare bellow to help us asses your condition. </p>
             <label for="fname">First name:</label>
             <br>
@@ -23,29 +23,29 @@
             <br>
             <input type="text" id="lname" name="lname">
             <br>
-            <label for="q1">How old are you?</label>
+            <label for="age">How old are you?</label>
             <br>
-            <input type="text" id="q1" name="q1">
+            <input type="text" id="age" name="age">
             <br>
             <p>Is there any history of Alzheimers in your family if,so is it a first degree relative?</p>
-            <input type="radio"id="history1" name="history1">
-            <label for="history1">Yes, but not a first degree relative</label>
+            <input type="radio"id="history_yes" name="history_yes">
+            <label for="history_yes">Yes, but not a first degree relative</label>
             <br>
-            <input type="radio" id="history2" name="history2">
-            <label for="history2">No history of Alzheimers</label>
+            <input type="radio" id="history_no" name="history_no">
+            <label for="history_no">No history of Alzheimers</label>
             <br>
-            <input type="radio" id="history3" name="history3">
-            <label for="history3">Yes, I have a first degree relative with Alzheimers</label>
+            <input type="radio" id="yes_1strelative" name="yes_1strelative">
+            <label for="yes_1strelative">Yes, I have a first degree relative with Alzheimers</label>
             <br>
             <p>Do you have the APOE ε4 Gene? </p>
-            <input type="radio"id="gene1" name="gene1">
-            <label for="gene1"> Yes</label>
+            <input type="radio"id="gene_yes" name="gene_yes">
+            <label for="gene_yes"> Yes</label>
             <br>
-            <input type="radio"id="gene2" name="gene2">
-            <label for="gene2"> No</label>
+            <input type="radio"id="gene_no" name="gene_no">
+            <label for="gene_no"> No</label>
             <br>
-            <input type="radio"id="gene3" name="gene3">
-            <label for="gene3"> I do not know</label
+            <input type="radio"id="gene_idk" name="gene_idk">
+            <label for="gene_idk"> I do not know</label
             <br>
             <p>Have you ever suffered from a severe head trauma?</p>
             <input type="radio" id="injury_no" name="injury_no">
@@ -54,80 +54,86 @@
             <input type="radio" id="injury_yes" name="injury_yes">
             <label for="injury_yes">Yes</label>
             <p>Select symtoms applicable to you</p>
-            <input type="checkbox" id="symptom1" name="symptom1">
-            <label for="symptom1">mood swings</label>
+            <input type="checkbox" id="mood_swings" name="mood_swings">
+            <label for="mood_swings">Mood swings</label>
             <br>
-            <input type="checkbox" id="symptom2" name="symptom2">
-            <label for="symptom2">Significant decline in memory</label>
+            <input type="checkbox" id="memory_decline" name="memory_decline">
+            <label for="memory_decline">Significant decline in memory</label>
             <br>
-            <input type="checkbox" id="symptom3" name="symptom3">
-            <label for="symptom3">Change in behaviour/ personality</label>
+            <input type="checkbox" id="personality_change" name="personality_change">
+            <label for="personality_change">Change in behaviour/ personality</label>
             <br>
-            <input type="checkbox" id="symptom4" name="symptom4">
-            <label for="symptom4">Irrational Reasoning and difficulty handling complex tasks</label>
+            <input type="checkbox" id="irrational_reasoning" name="irrational_reasoning">
+            <label for="irrational_reasoning">Irrational Reasoning </label>
             <br>
-            <input type="checkbox" id="symptom5" name="symptom5">
-            <label for="symptom5">Decline in language </label>
+            <input type="checkbox" id="difficulty_complex-tasks" name="difficulty_complex-tasks">
+            <label for="difficulty_complex-tasks">Difficulty handling complex tasks</label>
+            <br>
+            <input type="checkbox" id="language_decline" name="language_decline">
+            <label for="language_decline">Decline in language </label>
             <br>
             <p> Alzheimers can be broken down into four main stages (Preclinical stage, Mild,early stage, Moderate, middle stage and Severe, late stage).
             Select the dissabilities/ daily struggles below applicable to you so your stage can be assessed.  
             </p>
-            <input type="checkbox" id="struggle1" name="struggle">
-            <label for="struggle1">Remembering a name</label>
+            <input type="checkbox" id="remembering_name" name="remembering_name">
+            <label for="remembering_name">Remembering a name</label>
             <br>
-            <input type="checkbox" id="struggle2" name="struggle2">
-            <label for="struggle2">Recalling recent events</label>
+            <input type="checkbox" id="recalling-recent_memories" name="recalling-recent_memories">
+            <label for="recalling-recent_memories">Recalling recent events</label>
             <br>
-            <input type="checkbox" id="struggle3" name="struggle3">
-            <label for="struggle3">Remembering where a vauable object was placed(of significance)</label>
+            <input type="checkbox" id="forgetting_valuables" name="forgetting_valuables">
+            <label for="forgetting_valuables">Remembering where a vauable object was placed(of significance)</label>
             <br>
-            <input type="checkbox" id="struggle4" name="struggle4">
-            <label for="struggle4">Making plans</label>
+            <input type="checkbox" id="making_plans" name="making_plans">
+            <label for="making_plans">Making plans</label>
             <br>
-            <input type="checkbox" id="struggle5" name="struggle5">
-            <label for="struggle5">Basic organizational skills</label>
+            <input type="checkbox" id="organizational_skills" name="organizational_skills">
+            <label for="organizational_skills">Basic organizational skills</label>
             <br>
-            <input type="checkbox" id="struggle6" name="struggle6">
-            <label for="struggle6">Critical issues remembering events</label>
+            <input type="checkbox" id="critical-remembring-events" name="critical-remembring-events">
+            <label for="critical-remembring-events">Critical issues remembering events</label>
             <br>
-            <input type="checkbox" id="struggle7" name="struggle7">
-            <label for="struggle7">Issues with learning new things/ forming new memories</label>
+            <input type="checkbox" id="learning_new-things" name="learning_new-things">
+            <label for="learning_new-things">Issues with learning new things</label>
             <br>
-            <input type="checkbox" id="struggle8" name="struggle8">
-            <label for="struggle8">Trouble remembering own name however, not details about own life(phone#, address)</label>
+            <input type="checkbox" id="forming_new-memories" name="forming_new-memories">
+            <label for="forming_new-memories">Difficulty forming new mememories</label>
             <br>
-            <input type="checkbox" id="struggle9" name="struggle9">
-            <label for="struggle9">Difficulty with reading, writing, and working with numbers</label>
+            <input type="checkbox" id="remembering_name" name="remembering_name">
+            <label for="remembering_name">Trouble remembering own name however, not details about own life(phone#, address)</label>
             <br>
-            <input type="checkbox" id="struggle10" name="struggle10">
-            <label for="struggle10">Recognizing that people are familiar but forgetting names (could even include child or spouse)</label>
+            <input type="checkbox" id="difficulty_reading-writing" name="difficulty_reading-writing">
+            <label for="difficulty_reading-writing">Difficulty with reading, writing, and working with numbers</label>
             <br>
-            <input type="checkbox" id="struggle11" name="struggle11">
-            <label for="struggle11">Lossing track of time and setting</label>
+            <input type="checkbox" id="remebering_family-names" name="remebering_family-names">
+            <label for="remebering_family-names">Recognizing that people are familiar but forgetting names (could even include child or spouse)</label>
             <br>
-            <input type="checkbox" id="struggle12" name="struggle12">
-            <label for="struggle12">Suddenly moody or withdrawn from social settings</label>
+            <input type="checkbox" id="lossing_track-time-setting" name="lossing_track-time-setting">
+            <label for="lossing_track-time-setting">Lossing track of time and setting</label>
             <br>
-            <input type="checkbox" id="struggle 13" name="struggle13">
-            <label for="struggle13">Experiencing Hallucinations (was not present before symtoms began)</label>
+            <input type="checkbox" id="sudden_mood-swings" name="sudden_mood-swings">
+            <label for="sudden_mood-swings">Suddenly moody or withdrawn from social settings</label>
             <br>
-            <input type="checkbox" id="struggle14" name="struggle14">
-            <label for="struggle14">Paranoia (was not present before symtoms began)</label>
+            <input type="checkbox" id="a_hallucinations" name="a_hallucinations">
+            <label for="a_hallucinations">Experiencing Hallucinations (was not present before symtoms began)</label>
             <br>
-            <input type="checkbox" id="struggle15" name="struggle15">
-            <label for="struggle15">Delusions (was not present before symtoms began)</label>
+            <input type="checkbox" id="paranoia" name="paranoia">
+            <label for="paranoia">Paranoia (was not present before symtoms began)</label>
             <br>
-            <input type="checkbox" id="struggle16" name="struggle16">
-            <label for="struggle16">Restless,agitated,nervous,tearful</label> 
+            <input type="checkbox" id="a_delusions" name="a_delusions">
+            <label for="a_delusions">Delusions (was not present before symtoms began)</label>
             <br>
-            <input type="checkbox" id="struggle17" name="struggle17">
-            <label for="struggle17">Loss of basic physical activities(walking, sitting eating)</label>
+            <input type="checkbox" id="nervous-restless" name="nervous-restless">
+            <label for="nervous-restless">Restless,agitated,nervous,tearful</label> 
             <br>
-            <input type="checkbox" id="struggle18" name="struggle18">
-            <label for="struggle18">Loss of bowel and bladder control</label>
+            <input type="checkbox" id="basic_physical-activities" name="basic_physcial-activities">
+            <label for="basic_physical-activities">Loss of basic physical activities(walking, sitting eating)</label>
             <br>
-            <input type="checkbox" id="struggle19" name="struggle19">
-            <label for="struggle19">Unable to have a converstation (can say some words and phrases)</label>
+            <input type="checkbox" id="loss-bladder_control" name="loss-bladder_control">
+            <label for="loss-bladering_control">Loss of bowel and bladder control</label>
+            <br>
+            <input type="checkbox" id="basic_conversation" name="basic_conversation">
+            <label for="basic_conversation">Unable to have a converstation (can say some words and phrases)</label>
             <br>
             <input type="submit" value="Submit">
             
