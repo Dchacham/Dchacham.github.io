@@ -38,7 +38,7 @@ const a_stage2 = [
     'Loss of basic physical activities(walking, sitting eating)',
     'Loss of bowel and bladder control',
     'Unable to have a converstation (can say some words and phrases)',
-
+    
 ];
 
 
@@ -72,3 +72,8 @@ const s_stage3 = [
 'Flat, monotone voice',
 'General disinterest',
 ];
+
+
+// Stage one: When symptoms like lack of hygiene slected most likely stage one bc its the very beggining
+// Stage 3: any symptoms selected stage 3 most likely stage 3 most severe symptoms 
+// if symptoms are selected from 2 different stages the stage with more slected(# of symptoms) is the stage.  
