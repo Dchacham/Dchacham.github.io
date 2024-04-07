@@ -77,3 +77,4 @@ const s_stage3 = [
 // Stage one: When symptoms like lack of hygiene slected most likely stage one bc its the very beggining
 // Stage 3: any symptoms selected stage 3 most likely stage 3 most severe symptoms 
 // if symptoms are selected from 2 different stages the stage with more slected(# of symptoms) is the stage.  
+
