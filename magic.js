@@ -1,4 +1,33 @@
 // console.log ("C:\Users\Daniella\Desktop");
+var express = require('express');
+const app = express();
+const path = require("path");
+
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
+ })
+
+ app.get("/Alzheimers_info", (req, res) => {
+    res.sendFile(path.join(__dirname, "Alzheimers_info.html"));
+ })
+
+
+ app.get("/Schizophrenia_info", (req, res) => {
+    res.sendFile(path.join(__dirname, "Schizophrenia_info.html"));
+ })
+ 
+ "/alzheimers_data"
+ app.get("/alzheimers_data", (req, res) => {
+    res.sendFile(path.join(__dirname, "alzheimers_data.php"));
+    console.log(req.query)
+ })
+ app.listen(3000)
+
+
+
+
+
 function displayDate(){
     document.getElementById('date').innerHTML = Date()
 }
@@ -38,6 +67,7 @@ const a_stage2 = [
     'Loss of basic physical activities(walking, sitting eating)',
     'Loss of bowel and bladder control',
     'Unable to have a converstation (can say some words and phrases)',
+    'more prone to infections such as pneumonia'
     
 ];
 
