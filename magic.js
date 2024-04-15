@@ -4,8 +4,20 @@ const app = express();
 const path = require("path");
 
 
-app.get("/", (req, res) => {
+app.get("/index", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
+ })
+
+ app.get("/common", (req, res) => {
+    res.sendFile(path.join(__dirname, "common.html"));
+ })
+
+ app.get("/website_magic", (req, res) => {
+    res.sendFile(path.join(__dirname, "website_magic.css"));
+ })
+
+ app.get("/favicon", (req, res) => {
+    res.sendFile(path.join(__dirname, "favicon.jpg"));
  })
 
  app.get("/Alzheimers_info", (req, res) => {
@@ -17,11 +29,22 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "Schizophrenia_info.html"));
  })
  
- "/alzheimers_data"
+
  app.get("/alzheimers_data", (req, res) => {
     res.sendFile(path.join(__dirname, "alzheimers_data.php"));
     console.log(req.query)
  })
+
+ app.get("/alzheimers_form", (req, res) => {
+    res.sendFile(path.join(__dirname, "alzheimers_form.html"));
+    console.log(req.query)
+ })
+
+ app.get("/schizophrenia_form", (req, res) => {
+    res.sendFile(path.join(__dirname, "schizophrenia_form.html"));
+    console.log(req.query)
+ })
+
  app.listen(3000)
 
 
