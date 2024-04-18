@@ -3,24 +3,24 @@
 <html>
     <head>
         <title> Schizophrenia</title>
-        <link rel="icon" type="image/x-icon" href="favicon.jpg">
+        <link rel="icon" type="image/x-icon" href="/favicon">
         <script src="magic.js"></script>
       </head>
       <body>
-      <a href="index.html">Main page</a>
-      <form method="get" action="./schizophrenia_data.php">
+      <a href="/">Main page</a>
+      <form method="get" action="/schizophrenia_data">
       <h2>Schizophrenia</h2>    
       <p> Schizophrenia is broken up into three main stages known as prodomal, active and risidual.
             <br>
             Please fill out the questionare bellow to help asses which stage you are most likely at.</p>
-            <label for="Fname">First name:</label>
+            <label for="fname">First name:</label>
             <br>
-            <input type="text" id="Fname" name="Fname">
+            <input type="text" id="fname" name="fname">
             <br>
             <br>
-            <label for="Lname">Last name:</label>
+            <label for="lname">Last name:</label>
             <br>
-            <input type="text" id="Lname"name="Lname">
+            <input type="text" id="lname"name="lname">
             <br>
             <br>
             <label for="S_age">Age:</label>
@@ -28,26 +28,26 @@
             <input type="number" id="S_age" name="S_age">
             <br>
             <p>Gender:</p>
-            <input type="radio" id="gender_male" name="gender_male">
+            <input type="radio" id="gender_male" name="gender" value="male">
             <label for="gender_male">Male</label>
             <br>
-            <input type="radio" id="gender_female" name="gender_female">
+            <input type="radio" id="gender_female" name="gender" value="female">
             <label for="gender_female">Female</label>
             <p>Do you have any family history of Schizophrenia?</p>
-            <input type="radio" id="history_yes" name="history_yes">
+            <input type="radio" id="history_yes" name="history" value="yes">
             <label for="history_yes">Yes</label>
             <br>
-            <input type="radio" id="history_no" name="history_no">
+            <input type="radio" id="history_no" name="history" value="no">
             <label for="history_no">No</label>
             <br>
-            <input type="radio" id="1stdegree_relative" name="1stdegree_relative">
+            <input type="radio" id="1stdegree_relative" name="history" value="1stdegree_relative">
             <label for="1stdegree_relative">Yes, first degree relative</label>
             <p>Do you/ have you suffered from any substance abuse in the past?</p>
-            <input type="checkbox" id="substance-abuse_no" name="substance-abuse_no">
-            <label for="substance-abuse_no">No</label>
+            <input type="radio" id="substance_abuse_no" name="substance_abuse" value="no">
+            <label for="substance_abuse_no">No</label>
             <br>
-            <input type="checkbox" id="substance-abuse_yes" name="substance-abuse_yes">
-            <label for="substance-abuse_yes">Yes</label>
+            <input type="radio" id="substance_abuse_yes" name="substance_abuse" value="yes">
+            <label for="substance_abuse_yes">Yes</label>
             <br>
             <input type="checkbox" id="cannabis_yes" name="cannabis_yes">
             <label for="cannabis_yes">Yes and used:Cannabis, Cocaine, LSD or Amphetamines</label>
@@ -123,8 +123,8 @@
             <input type="checkbox" id="numb_emotions" name="numb_emotions">
             <label for="numb_emotions">Numbness of emotions</label>
             <br>
-            <input type="checkbox" id="social_withdrawl" name="social_withdrawl">
-            <label for="social_withdrawl">Social withdrawl</label>
+            <input type="checkbox" id="social_withdrawal" name="social_withdrawal">
+            <label for="social_withdrawal">Social withdrawal</label>
             <br>
             <input type="checkbox" id="difficulty_planning" name="difficulty_planning">
             <label for="difficulty_planning">Difficulty planning and participating in activities </label>
