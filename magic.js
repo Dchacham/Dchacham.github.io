@@ -1,133 +1,109 @@
 // console.log ("C:\Users\Daniella\Desktop");
-var express = require('express');
+var express = require("express");
 const app = express();
 const path = require("path");
 
+app.get("/", (request, response) => {
+  response.sendFile(path.join(__dirname, "index.html"));
+});
 
-app.get("/index", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
- })
+app.get("/alzheimers_info", (request, response) => {
+  response.sendFile(path.join(__dirname, "Alzheimers_info.html"));
+});
 
- app.get("/common", (req, res) => {
-    res.sendFile(path.join(__dirname, "common.html"));
- })
+app.get("/schizophrenia_info", (request, response) => {
+  response.sendFile(path.join(__dirname, "Schizophrenia_info.html"));
+});
 
- app.get("/website_magic", (req, res) => {
-    res.sendFile(path.join(__dirname, "website_magic.css"));
- })
+app.get("/alzheimers_data", (request, response) => {
+  response.sendFile(path.join(__dirname, "alzheimers_data.html"));
+  // response.sendFile(path.join(__dirname, "alzheimers_data.php"));
+  // console.log(request.query)
+  const formData = request.query;
+  // console.log(JSON.stringify(formData))
+  for (let param in formData) {
+    if (a_stage2_names.includes(param)) {
+      console.log(param, " : ", formData[param]);
+    }
+  }
+});
 
- app.get("/favicon", (req, res) => {
-    res.sendFile(path.join(__dirname, "favicon.jpg"));
- })
+app.get("/schizophrenia_data", (request, response) => {
+  response.sendFile(path.join(__dirname, "schizophrenia_data.html"));
+  // response.sendFile(path.join(__dirname, "alzheimers_data.php"));
+  // console.log(request.query)
+});
 
- app.get("/Alzheimers_info", (req, res) => {
-    res.sendFile(path.join(__dirname, "Alzheimers_info.html"));
- })
+app.get("/favicon", (request, response) => {
+  response.sendFile(path.join(__dirname, "favicon.jpg"));
+});
 
+app.get("/alzheimers_form", (request, response) => {
+  response.sendFile(path.join(__dirname, "alzheimers_form.html"));
+});
 
- app.get("/Schizophrenia_info", (req, res) => {
-    res.sendFile(path.join(__dirname, "Schizophrenia_info.html"));
- })
- 
+app.get("/schizophrenia_form", (request, response) => {
+  response.sendFile(path.join(__dirname, "schizophrenia_form.html"));
+});
 
- app.get("/alzheimers_data", (req, res) => {
-    res.sendFile(path.join(__dirname, "alzheimers_data.php"));
-    console.log(req.query)
- })
+app.listen(3000);
 
- app.get("/alzheimers_form", (req, res) => {
-    res.sendFile(path.join(__dirname, "alzheimers_form.html"));
-    console.log(req.query)
- })
-
- app.get("/schizophrenia_form", (req, res) => {
-    res.sendFile(path.join(__dirname, "schizophrenia_form.html"));
-    console.log(req.query)
- })
-
- app.listen(3000)
-
-
-
-
-
-function displayDate(){
-    document.getElementById('date').innerHTML = Date()
-}
-
-
-
-const a_stage1 = [
-    'Remembering a name',
-    'Recalling recent events',
-    'Remembering where a vauable object was placed(of significance)',
-    'Making plans',
-    'Basic organizational skills',
-
-
-    
-     
+const a_stage1_names = [
+  "remembering_name",
+  "recalling_recent_memories",
+  "forgetting_valuables",
+  "making_plans",
+  "organizational_skills",
+];
+const a_stage2_names = [
+  "critical_remembring_events",
+  "learning_new_things",
+  "forming_new_memories",
+  "remembering_own_name",
+  "difficulty_reading_writing",
+  "remebering_family_names",
+  "losing_track_time_setting",
+  "sudden_mood_swings",
+  "a_hallucinations",
+  "paranoia",
+  "a_delusions",
+  "nervous_restless",
+];
+const a_stage3_names = [
+  "basic_physcial_activities",
+  "loss_bladder_control",
+  "basic_conversation",
+  "prone_infections",
 ];
 
-const a_stage2 = [
-    'Critical issues remembering events',
-    'Issues with learning new things',
-    'Difficulty forming new mememories',
-    'Trouble remembering own name however, not details about own life(phone#, address)',
-    'Difficulty with reading, writing, and working with numbers',
-    'Recognizing that people are familiar but forgetting names (could even include child or spouse)',
-    'Lossing track of time and setting',
-    'Suddenly moody or withdrawn from social settings',
-    'Experiencing Hallucinations (was not present before symtoms began)',
-    'Paranoia (was not present before symtoms began)',
-    'Delusions (was not present before symtoms began)',
-    'Restless,agitated,nervous,tearful',
-
-
+const s_stage1_names = [
+  "social_isolation",
+  "mild_hallucinations",
+  "neglecting_hygiene",
+  "anxiety",
+  "sleep_problems",
+  "difficulty_concentrating",
 ];
 
-    const a_stage3 = [
-    'Loss of basic physical activities(walking, sitting eating)',
-    'Loss of bowel and bladder control',
-    'Unable to have a converstation (can say some words and phrases)',
-    'more prone to infections such as pneumonia'
-    
+const s_stage2_names = [
+  "hallucinations_serious",
+  "delusions",
+  "disorganized_thoughts",
+  "mumbling",
+  "useless_movement",
+  "wandering",
+  "laughing_self",
+  "numb_emotions",
 ];
 
-
-
-const s_stage1 = [
-'Social isolation', 
- 'Neglecting personal hygiene', 
- 'Mild or poorly formed Hallucinations', 
- 'Anxiety',
-'Sleep problems',
-'Difficulty concentrating',
-
-
+const s_stage3_names = [
+  "social_withdrawal",
+  "difficulty_planning",
+  "absent_expression",
+  "monotone_voice",
+  "general_disinterest",
 ];
-
-const s_stage2 = [
-'Hallucinations (false senses such as hearing, seeing, smelling, feeling)',
-'Delusions',
-'Confusion and disorganized thoughts',
-'Exessive/useless movement',
-'Mumbling',
-'Wandering',
-'Laughing to oneself',
-'Numbness of emotions',
-];
-
-const s_stage3 = [
-'Social withdrawl',
-'Difficulty planning and participating in activities',
-'Reduced or absent facial expressions',
-'Flat, monotone voice',
-'General disinterest',
-];
-
 
 // Stage one: When symptoms like lack of hygiene slected most likely stage one bc its the very beggining
-// Stage 3: any symptoms selected stage 3 most likely stage 3 most severe symptoms 
-// if symptoms are selected from 2 different stages the stage with more slected(# of symptoms) is the stage.  
-
+// Stage 3: any symptoms selected stage 3 most likely stage 3 most severe symptoms
+// if symptoms are selected from 2 different stages the stage with more slected(# of symptoms) is the stage.
