@@ -18,8 +18,8 @@ app.get("/schizophrenia_info", (request, response) => {
    response.sendFile(path.join(__dirname, "Schizophrenia_info.html"));
 });
 
-app.get("/alzheimers_data", (request, response) => {
-   response.sendFile(path.join(__dirname, "alzheimers_data.html"));
+app.post("/a_stage_results", (request, response) => {
+
    let a1count = 0
    let a2count = 0
    let a3count = 0
@@ -45,26 +45,30 @@ app.get("/alzheimers_data", (request, response) => {
    if (a1count > a2count) {
       if (a1count > a3count) {
          console.log("a1 has the most")
+           response.sendFile(path.join(__dirname, "a_stage1_results.html")); 
       } else {
          console.log("a3 is the greatest")
+         response.sendFile(path.join(__dirname, "a_stage3_results.html"));
       }
   }
    else if (a2count > a3count){
       console.log("a2 is the greatest")
+      response.sendFile(path.join(__dirname, "a_stage2_results.html"));
    }
    else {
       console.log("a3 is the greatest")
+      response.sendFile(path.join(__dirname, "a_stage3_results.html"));
    }
 
 
 
 });
 
-app.get("/schizophrenia_data", (request, response) => {
-   response.sendFile(path.join(__dirname, "schizophrenia_data.html"));
-   // response.sendFile(path.join(__dirname, "alzheimers_data.php"));
-   // console.log(request.query)
-});
+// app.("/schizophrenia_data", (request, response) => {
+//    response.sendFile(path.join(__dirname, "schizophrenia_data.html"));
+// });
+ app.post("/s_stage_results", (request, response) => {
+
 let s1count = 0
 let s2count = 0
 let s3count = 0
@@ -89,17 +93,22 @@ for (let param in formData) {
    if (s1count > s2count) {
       if (s1count > s3count) {
          console.log("s1 has the most")
+      response.sendFile(path.join(__dirname, "s_stage1_results.html"));
       } else {
-         console.log("a3 is the greatest")
+         console.log("s3 is the greatest")
+         response.sendFile(path.join(__dirname, "s_stage3_results.html")); 
       }
   }
-   else if (a2count > a3count){
-      console.log("a2 is the greatest")
+   else if (s2count > s3count){
+      console.log("s2 is the greatest")
+
+      response.sendFile(path.join(__dirname, "s_stage2_results.html"));
    }
    else {
-      console.log("a3 is the greatest")
-   }
-
+      console.log("s3 is the greatest")
+      response.sendFile(path.join(__dirname, "s_stage3_results.html"));
+   }}
+});
 
 app.get("/favicon", (request, response) => {
    response.sendFile(path.join(__dirname, "favicon.jpg"));

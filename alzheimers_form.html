@@ -12,7 +12,7 @@
         <h1>Alzheimers</h1>
         <p id="pink_line"> Alzheimers is one of many gentic disorders.</p>
         <p>Alzheimers is broken up into three main stages.The different stages of Alzheimers vary on the severity of ones condition. The three main stages of Alzheimers are Mild,Moderate, and late stage Alzheimers.</p>
-        <form  action="/alzheimers_data">
+        <form method="post" action="/a_stage_results">
             <p> Fill out the questionare bellow to help us asses your condition. </p>
             <label for="fname">First name:</label>
             <br>
@@ -26,51 +26,7 @@
             <br>
             <input type="number" id="age" name="age">
             <br>
-            <p>Is there any history of Alzheimers in your family if,so is it a first degree relative?</p>
-            <input type="radio"id="history_yes" name="history" value="yes">
-            <label for="history_yes">Yes, but not a first degree relative</label>
-            <br>
-            <input type="radio" id="history_no" name="history" value="no">
-            <label for="history_no">No history of Alzheimers</label>
-            <br>
-            <input type="radio" id="yes_1strelative" name="history" value="yes_1strelative">
-            <label for="yes_1strelative">Yes, I have a first degree relative with Alzheimers</label>
-            <br>
-            <p>Do you have the APOE ε4 Gene? </p>
-            <input type="radio"id="gene_yes" name="gene" value="yes">
-            <label for="gene_yes"> Yes</label>
-            <br>
-            <input type="radio"id="gene_no" name="gene" value="no">
-            <label for="gene_no"> No</label>
-            <br>
-            <input type="radio"id="gene_idk" name="gene" value="idk">
-            <label for="gene_idk"> I do not know</label
-            <br>
-            <p>Have you ever suffered from a severe head trauma?</p>
-            <input type="radio" id="injury_yes" name="injury" value="yes">
-            <label for="injury_yes">Yes</label>
-            <br>
-            <input type="radio" id="injury_no" name="injury" value="no">
-            <label for="injury_no">No</label>
-            <p>Select symtoms applicable to you</p>
-            <input type="checkbox" id="mood_swings" name="mood_swings">
-            <label for="mood_swings">Mood swings</label>
-            <br>
-            <input type="checkbox" id="memory_decline" name="memory_decline">
-            <label for="memory_decline">Significant decline in memory</label>
-            <br>
-            <input type="checkbox" id="personality_change" name="personality_change">
-            <label for="personality_change">Change in behaviour/ personality</label>
-            <br>
-            <input type="checkbox" id="irrational_reasoning" name="irrational_reasoning">
-            <label for="irrational_reasoning">Irrational Reasoning </label>
-            <br>
-            <input type="checkbox" id="difficulty_complex_tasks" name="difficulty_complex_tasks">
-            <label for="difficulty_complex_tasks">Difficulty handling complex tasks</label>
-            <br>
-            <input type="checkbox" id="language_decline" name="language_decline">
-            <label for="language_decline">Decline in language</label>
-            <br>
+          
             <p> Alzheimers can be broken down into four main stages (Preclinical stage, Mild,early stage, Moderate, middle stage and Severe, late stage).
             Select the dissabilities/ daily struggles below applicable to you so your stage can be assessed.  
             </p>
