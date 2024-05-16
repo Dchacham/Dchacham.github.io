@@ -18,7 +18,7 @@ app.get("/schizophrenia_info", (request, response) => {
    response.sendFile(path.join(__dirname, "Schizophrenia_info.html"));
 });
 
-app.post("/a_stage_results", (request, response) => {
+app.get("/a_stage_results", (request, response) => {
 
    let a1count = 0
    let a2count = 0
@@ -64,16 +64,16 @@ app.post("/a_stage_results", (request, response) => {
 
 });
 
-// app.("/schizophrenia_data", (request, response) => {
-//    response.sendFile(path.join(__dirname, "schizophrenia_data.html"));
-// });
- app.post("/s_stage_results", (request, response) => {
+
+ app.get("/s_stage_results", (request, response) => {
 
 let s1count = 0
 let s2count = 0
 let s3count = 0
 const formData = request.query;
+console.log( " : ", JSON.stringify(formData));
 for (let param in formData) {
+
    if (s_stage1_names.includes(param)) {
       console.log(param, " : ", formData[param]);
       s1count++
@@ -85,7 +85,7 @@ for (let param in formData) {
    else if (s_stage3_names.includes(param)) {
       console.log(param, " : ", formData[param]);
       s3count++
-   }
+   }}
    console.log(s1count)
    console.log(s2count)
    console.log(s3count)
@@ -107,7 +107,8 @@ for (let param in formData) {
    else {
       console.log("s3 is the greatest")
       response.sendFile(path.join(__dirname, "s_stage3_results.html"));
-   }}
+   }
+   response.sendFile(path.join(__dirname,"s_stage1_results.html" ))
 });
 
 app.get("/favicon", (request, response) => {
