@@ -1,4 +1,3 @@
-// console.log ("C:\Users\Daniella\Desktop");
 var express = require("express");
 const app = express();
 const path = require("path");
@@ -26,37 +25,27 @@ app.get("/a_stage_results", (request, response) => {
    const formData = request.query;
    for (let param in formData) {
       if (a_stage1_names.includes(param)) {
-         console.log(param, " : ", formData[param]);
          a1count++
       }
       else if (a_stage2_names.includes(param)) {
-         console.log(param, " : ", formData[param]);
          a2count++
       }
       else if (a_stage3_names.includes(param)) {
-         console.log(param, " : ", formData[param]);
          a3count++
       }
    }
-   console.log(a1count)
-   console.log(a2count)
-   console.log(a3count)
 
    if (a1count > a2count) {
       if (a1count > a3count) {
-         console.log("a1 has the most")
            response.sendFile(path.join(__dirname, "a_stage1_results.html")); 
       } else {
-         console.log("a3 is the greatest")
          response.sendFile(path.join(__dirname, "a_stage3_results.html"));
       }
   }
    else if (a2count > a3count){
-      console.log("a2 is the greatest")
       response.sendFile(path.join(__dirname, "a_stage2_results.html"));
    }
    else {
-      console.log("a3 is the greatest")
       response.sendFile(path.join(__dirname, "a_stage3_results.html"));
    }
 
@@ -71,41 +60,30 @@ let s1count = 0
 let s2count = 0
 let s3count = 0
 const formData = request.query;
-console.log( " : ", JSON.stringify(formData));
 for (let param in formData) {
 
    if (s_stage1_names.includes(param)) {
-      console.log(param, " : ", formData[param]);
       s1count++
    }
    else if (s_stage2_names.includes(param)) {
-      console.log(param, " : ", formData[param]);
       s2count++
    }
    else if (s_stage3_names.includes(param)) {
-      console.log(param, " : ", formData[param]);
       s3count++
    }}
-   console.log(s1count)
-   console.log(s2count)
-   console.log(s3count)
 
    if (s1count > s2count) {
       if (s1count > s3count) {
-         console.log("s1 has the most")
       response.sendFile(path.join(__dirname, "s_stage1_results.html"));
       } else {
-         console.log("s3 is the greatest")
          response.sendFile(path.join(__dirname, "s_stage3_results.html")); 
       }
   }
    else if (s2count > s3count){
-      console.log("s2 is the greatest")
 
       response.sendFile(path.join(__dirname, "s_stage2_results.html"));
    }
    else {
-      console.log("s3 is the greatest")
       response.sendFile(path.join(__dirname, "s_stage3_results.html"));
    }
    response.sendFile(path.join(__dirname,"s_stage1_results.html" ))
